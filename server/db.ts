@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, contactMessages, InsertContactMessage, teamMembers, TeamMember, blogPosts, BlogPost, appointments, InsertAppointment } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -87,6 +87,65 @@ export async function getUserByOpenId(openId: string) {
   const result = await db.select().from(users).where(eq(users.openId, openId)).limit(1);
 
   return result.length > 0 ? result[0] : undefined;
+}
+
+// Contact messages queries
+export async function createContactMessage(data: InsertContactMessage) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  await db.insert(contactMessages).values(data);
+}
+
+// Team members queries
+export async function getActiveTeamMembers(): Promise<TeamMember[]> {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+  const result = await db
+    .select()
+    .from(teamMembers)
+    .where(eq(teamMembers.active, 1))
+    .orderBy(teamMembers.displayOrder);
+  return result;
+}
+
+// Blog posts queries
+export async function getPublishedBlogPosts(): Promise<BlogPost[]> {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+  const result = await db
+    .select()
+    .from(blogPosts)
+    .where(eq(blogPosts.published, 1))
+    .orderBy(blogPosts.createdAt);
+  return result;
+}
+
+export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+  const db = await getDb();
+  if (!db) {
+    return undefined;
+  }
+  const result = await db
+    .select()
+    .from(blogPosts)
+    .where(eq(blogPosts.slug, slug))
+    .limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+// Appointments queries
+export async function createAppointment(data: InsertAppointment) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  await db.insert(appointments).values(data);
 }
 
 // TODO: add feature queries here as your schema grows.

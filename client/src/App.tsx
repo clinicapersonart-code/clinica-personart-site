@@ -5,16 +5,37 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Sobre from "./pages/Sobre";
+import Servicos from "./pages/Servicos";
+import Equipe from "./pages/Equipe";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import Agendar from "./pages/Agendar";
+import Contato from "./pages/Contato";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <Navbar />
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path="/sobre" component={Sobre} />
+        <Route path="/servicos" component={Servicos} />
+        <Route path="/equipe" component={Equipe} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/agendar" component={Agendar} />
+        <Route path="/contato" component={Contato} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+      <Footer />
+      <WhatsAppButton />
+    </>
   );
 }
 

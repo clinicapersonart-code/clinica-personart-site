@@ -26,3 +26,14 @@
 - [x] Verificar todas as funcionalidades
 - [x] Otimizar performance e SEO
 - [x] Criar checkpoint do projeto
+
+## Fase 5: Melhorias e Migração de Conteúdo
+- [x] Extrair logo correto dos arquivos enviados
+- [x] Instalar e configurar fonte Glancyr
+- [x] Adicionar Google Ads conversion tracking
+- [x] Extrair conteúdo do blog do Wix
+- [x] Extrair informações da equipe do Wix
+- [x] Migrar dados para o banco de dados
+- [x] Atualizar informações de contato reais
+- [x] Testar todas as funcionalidades
+- [x] Criar checkpoint final

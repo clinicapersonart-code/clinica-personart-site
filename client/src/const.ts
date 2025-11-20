@@ -2,7 +2,7 @@ export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 
 export const APP_TITLE = import.meta.env.VITE_APP_TITLE || "App";
 
-export const APP_LOGO = "/logo-personart.webp";
+export const APP_LOGO = "/logo-personart.png";
 
 // Generate login URL at runtime so redirect URI reflects the current origin.
 export const getLoginUrl = () => {
@@ -24,14 +24,15 @@ export const getLoginUrl = () => {
 export const CLINIC_INFO = {
   name: "Clínica Personart",
   tagline: "Transformando vidas com ciência, cuidado e bem-estar emocional.",
-  phone: "(11) 99999-9999", // Atualizar com telefone real
-  whatsapp: "5511999999999", // Atualizar com WhatsApp real
-  email: "contato@clinicapersonart.com",
+  phone: "(15) 3329-7084",
+  whatsapp: "551533297084",
+  email: "clinicapersonart@gmail.com",
+  instagram: "https://instagram.com/clinicapersonart",
   address: {
-    street: "Rua Exemplo, 123",
-    city: "São Paulo",
+    street: "R. Fernão Sales, 672 - Vila Hortência",
+    city: "Sorocaba",
     state: "SP",
-    zip: "00000-000"
+    zip: "18020-260"
   },
   social: {
     instagram: "https://instagram.com/clinicapersonart"

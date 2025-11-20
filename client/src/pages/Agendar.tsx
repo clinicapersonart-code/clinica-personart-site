@@ -14,6 +14,7 @@ import {
 import { SERVICES } from "@/const";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
+import { trackAppointmentConversion } from "@/components/GoogleAdsTracking";
 import { Calendar } from "lucide-react";
 
 export default function Agendar() {
@@ -28,6 +29,7 @@ export default function Agendar() {
 
   const createAppointmentMutation = trpc.appointments.create.useMutation({
     onSuccess: () => {
+      trackAppointmentConversion(); // Rastreia conversão do Google Ads
       toast.success("Solicitação de agendamento enviada com sucesso! Entraremos em contato em breve para confirmar.");
       setFormData({
         patientName: "",

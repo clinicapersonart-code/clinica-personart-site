@@ -8,6 +8,7 @@ import { CLINIC_INFO } from "@/const";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
+import { trackContactConversion } from "@/components/GoogleAdsTracking";
 
 export default function Contato() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export default function Contato() {
 
   const sendMessageMutation = trpc.contact.sendMessage.useMutation({
     onSuccess: () => {
+      trackContactConversion(); // Rastreia conversão do Google Ads
       toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
       setFormData({
         name: "",

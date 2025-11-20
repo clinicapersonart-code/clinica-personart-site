@@ -15,6 +15,7 @@ import Contato from "./pages/Contato";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import GoogleAdsTracking from "./components/GoogleAdsTracking";
 
 function Router() {
   return (
@@ -52,6 +53,7 @@ function App() {
         // switchable
       >
         <TooltipProvider>
+          <GoogleAdsTracking />
           <Toaster />
           <Router />
         </TooltipProvider>

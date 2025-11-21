@@ -27,11 +27,8 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <a className="flex items-center hover:opacity-80 transition-opacity">
             <img src={APP_LOGO} alt={CLINIC_INFO.name} className="h-10 w-auto" />
-            <span className="font-semibold text-lg hidden sm:inline-block text-primary">
-              {CLINIC_INFO.name}
-            </span>
           </a>
         </Link>
 

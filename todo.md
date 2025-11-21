@@ -37,3 +37,6 @@
 - [x] Atualizar informações de contato reais
 - [x] Testar todas as funcionalidades
 - [x] Criar checkpoint final
+
+## Ajustes Visuais
+- [x] Remover texto "Clínica Personart" do cabeçalho, deixando apenas o logo

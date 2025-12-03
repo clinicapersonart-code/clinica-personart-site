@@ -40,3 +40,10 @@
 
 ## Ajustes Visuais
 - [x] Remover texto "Clínica Personart" do cabeçalho, deixando apenas o logo
+
+## Fase 6: Adicionar Logo e Fotos da Equipe
+- [x] Fazer upload do logo da Personart
+- [x] Fazer upload da foto de Janaína (blusa branca e calça preta)
+- [x] Fazer upload da foto de Bruno (camiseta preta)
+- [x] Fazer upload da foto de Stephanie (blusa bege e calça branca)
+- [x] Atualizar página de equipe com as fotos

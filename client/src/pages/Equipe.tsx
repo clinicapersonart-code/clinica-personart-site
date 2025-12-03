@@ -10,7 +10,7 @@ export default function Equipe() {
       role: "Psicóloga Clínica",
       crp: "", // CRP não fornecido, deixando vazio ou removendo se preferir
       bio: "Psicóloga com abordagem em Terapia Cognitiva Comportamental, com foco em autoestima e terapia com idosos.",
-      image: "/_MG_8645.jpg", // Janaína (blusa branca)
+      image: "/team-janaina.jpg", // Janaína (blusa branca)
       social: {
         instagram: "#",
         linkedin: "#"
@@ -21,7 +21,7 @@ export default function Equipe() {
       role: "Psicólogo",
       crp: "",
       bio: "Psicólogo com abordagem em Terapia Cognitiva Comportamental e Pós-Graduando em PBE na Prática Clínica.",
-      image: "/_MG_8524.jpg", // Bruno (homem)
+      image: "/team-bruno.jpg", // Bruno (camiseta preta)
       social: {
         instagram: "#",
         linkedin: "#"
@@ -32,7 +32,7 @@ export default function Equipe() {
       role: "Psicóloga Clínica e ABA",
       crp: "",
       bio: "Psicóloga especialista em Terapia Cognitiva Comportamental e em Análise do Comportamento Aplicada (ABA).",
-      image: "/_MG_8520-2.jpg", // Stephanie (blusa bege, óculos)
+      image: "/team-stephanie.jpg", // Stephanie (blusa bege, calça branca)
       social: {
         instagram: "#",
         linkedin: "#"

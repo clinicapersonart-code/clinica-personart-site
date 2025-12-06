@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SERVICES } from "@shared/const";
-import { User, Baby, Users, ArrowRight, CheckCircle, Brain, Puzzle } from "lucide-react";
+import { User, Baby, Users, ArrowRight, CheckCircle, Brain, Puzzle, ClipboardCheck, Scale, Briefcase } from "lucide-react";
 
 export default function Servicos() {
   const iconMap: Record<string, any> = {
@@ -11,6 +11,9 @@ export default function Servicos() {
     users: Users,
     brain: Brain,
     puzzle: Puzzle,
+    "clipboard-check": ClipboardCheck,
+    scale: Scale,
+    briefcase: Briefcase,
   };
 
   const serviceDetails = [
@@ -107,6 +110,78 @@ export default function Servicos() {
         {
           title: "3. Intervenção e Análise de Dados",
           description: "Aplicação consistente dos programas com registro contínuo de dados para monitorar a evolução."
+        }
+      ]
+    },
+    {
+      ...SERVICES[4], // Avaliação Bariátrica/Vasectomia/Laqueadura
+      benefits: [
+        "Avaliação obrigatória exigida por lei",
+        "Entrevista clínica presencial",
+        "Aplicação de testes psicológicos validados",
+        "Emissão de laudo técnico",
+        "Orientação pré-cirúrgica"
+      ],
+      steps: [
+        {
+          title: "1. Entrevista Clínica",
+          description: "Avaliação da saúde mental, motivações, histórico de transtornos alimentares e rede de apoio familiar."
+        },
+        {
+          title: "2. Avaliação Psicológica",
+          description: "Aplicação de testes para avaliar estado emocional, adesão ao tratamento e compreensão do procedimento."
+        },
+        {
+          title: "3. Laudo e Orientação",
+          description: "Emissão de laudo técnico e sessões de aconselhamento pré-cirúrgico quando necessário."
+        }
+      ]
+    },
+    {
+      ...SERVICES[5], // Perícia Psicológica
+      benefits: [
+        "Atuação em processos judiciais e extrajudiciais",
+        "Laudos técnicos especializados",
+        "Varas criminais, cíveis, família e trabalho",
+        "Entrevistas e testes psicológicos forenses",
+        "Pareceres técnicos fundamentados"
+      ],
+      steps: [
+        {
+          title: "1. Análise do Processo",
+          description: "Revisão detalhada da documentação judicial e identificação dos quesitos a serem respondidos."
+        },
+        {
+          title: "2. Avaliação Pericial",
+          description: "Entrevistas clínicas, aplicação de testes psicológicos e vistorias quando necessário."
+        },
+        {
+          title: "3. Elaboração do Laudo",
+          description: "Redação de laudo pericial técnico com conclusões fundamentadas em evidências científicas."
+        }
+      ]
+    },
+    {
+      ...SERVICES[6], // Avaliação NR1
+      benefits: [
+        "Conformidade com NR-1 do Ministério do Trabalho",
+        "Identificação de riscos psicossociais",
+        "Questionários validados (COPSOQ II)",
+        "Laudo técnico completo",
+        "Plano de ação para mitigação de riscos"
+      ],
+      steps: [
+        {
+          title: "1. Diagnóstico Organizacional",
+          description: "Aplicação de questionários validados, entrevistas e análise de indicadores (absenteísmo, rotatividade)."
+        },
+        {
+          title: "2. Avaliação dos Riscos",
+          description: "Identificação e mensuração de fatores como sobrecarga, assédio, burnout e clima organizacional."
+        },
+        {
+          title: "3. Laudo e Plano de Ação",
+          description: "Elaboração de laudo técnico e plano de ação com medidas preventivas e corretivas para a empresa."
         }
       ]
     }

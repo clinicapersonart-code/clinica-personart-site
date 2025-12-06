@@ -47,3 +47,10 @@
 - [x] Fazer upload da foto de Bruno (camiseta preta)
 - [x] Fazer upload da foto de Stephanie (blusa bege e calça branca)
 - [x] Atualizar página de equipe com as fotos
+
+## Fase 7: Adicionar Novos Serviços
+- [x] Pesquisar sobre Avaliação Psicológica para Cirurgia Bariátrica, Vasectomia e Laqueadura
+- [x] Pesquisar sobre Perícia Psicológica
+- [x] Pesquisar sobre Avaliação de Riscos Psicossociais NR1
+- [x] Adicionar os três novos serviços à página de serviços
+- [x] Testar e criar checkpoint

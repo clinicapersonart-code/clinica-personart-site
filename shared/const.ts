@@ -51,6 +51,24 @@ export const SERVICES = [
     title: "Terapia ABA (Análise do Comportamento Aplicada)",
     description: "Intervenção baseada em evidências científicas para o desenvolvimento de habilidades e redução de comportamentos desafiadores, especialmente indicada para autismo e outros transtornos do desenvolvimento.",
     icon: "puzzle"
+  },
+  {
+    id: "avaliacao-bariatrica",
+    title: "Avaliação Psicológica para Cirurgia Bariátrica, Vasectomia e Laqueadura",
+    description: "Avaliação psicológica obrigatória para procedimentos cirúrgicos. Verificamos se você está preparado emocionalmente, avaliamos motivações, saúde mental, adesão ao tratamento e rede de apoio. Processo inclui entrevista clínica, testes psicológicos e emissão de laudo técnico.",
+    icon: "clipboard-check"
+  },
+  {
+    id: "pericia-psicologica",
+    title: "Perícia Psicológica",
+    description: "Investigação técnica e científica das condições psicológicas para processos judiciais e extrajudiciais. Atuamos como peritos em varas criminais, cíveis, de família e trabalho, elaborando laudos, perícias e pareceres técnicos que servem como prova em processos.",
+    icon: "scale"
+  },
+  {
+    id: "avaliacao-nr1",
+    title: "Avaliação dos Riscos Psicossociais da NR1",
+    description: "Avaliação obrigatória para empresas conforme NR-1 do Ministério do Trabalho. Identificamos e avaliamos riscos psicossociais no ambiente de trabalho (sobrecarga, assédio, burnout, etc.), elaboramos laudo técnico e plano de ação para proteção da saúde mental dos colaboradores.",
+    icon: "briefcase"
   }
 ];
 

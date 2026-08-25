@@ -3,6 +3,7 @@ import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SERVICES } from "@shared/const";
+import BackToTop from "@/components/BackToTop";
 import { User, Baby, Users, ArrowRight, CheckCircle, Brain, Puzzle, ClipboardCheck, Scale, Briefcase } from "lucide-react";
 
 export default function Servicos() {
@@ -221,6 +222,40 @@ export default function Servicos() {
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
       </section>
 
+      {/* Índice: atalho para cada serviço */}
+      <section className="py-12 md:py-16 bg-secondary/10 border-y border-border">
+        <div className="container">
+          <h2 className="text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-8">
+            Ir direto para o serviço
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {serviceDetails.map((service) => {
+              const Icon = iconMap[service.icon] || User;
+              return (
+                <a
+                  key={service.id}
+                  href={`#${service.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById(service.id)
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  className="group flex items-center gap-4 rounded-xl bg-card p-4 shadow-sm border border-transparent transition-all hover:border-primary hover:shadow-md hover:-translate-y-0.5"
+                >
+                  <div className="w-11 h-11 shrink-0 rounded-lg bg-secondary/20 flex items-center justify-center transition-colors group-hover:bg-primary/20">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground leading-snug">
+                    {service.title}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Serviços Detalhados */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container">
@@ -232,7 +267,8 @@ export default function Servicos() {
               return (
                 <div
                   key={service.id}
-                  className={`grid md:grid-cols-2 gap-16 items-center ${
+                  id={service.id}
+                  className={`grid md:grid-cols-2 gap-16 items-center scroll-mt-28 ${
                     !isEven ? "md:flex-row-reverse" : ""
                   }`}
                 >
@@ -320,6 +356,8 @@ export default function Servicos() {
           <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-white rounded-full blur-3xl"></div>
         </div>
       </section>
+
+      <BackToTop />
     </div>
   );
 }

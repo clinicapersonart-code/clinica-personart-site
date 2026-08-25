@@ -1,10 +1,17 @@
 import { Link } from "wouter";
+import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SERVICES } from "@shared/const";
 import { User, Baby, Users, ArrowRight, CheckCircle, Brain, Puzzle, ClipboardCheck, Scale, Briefcase } from "lucide-react";
 
 export default function Servicos() {
+  useSeo({
+    title: "Serviços de Psicologia",
+    description:
+      "Terapia individual e infantil, avaliação neuropsicológica, terapia ABA, avaliação pré-cirúrgica, perícia psicológica e riscos psicossociais da NR-1.",
+  });
+
   const iconMap: Record<string, any> = {
     user: User,
     baby: Baby,

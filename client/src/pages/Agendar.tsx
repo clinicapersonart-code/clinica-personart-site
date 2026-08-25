@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useSeo } from "@/hooks/useSeo";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Calendar } from "@/components/ui/calendar";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -27,6 +28,12 @@ const scheduleSchema = z.object({
 type ScheduleFormValues = z.infer<typeof scheduleSchema>;
 
 export default function Agendar() {
+  useSeo({
+    title: "Agendar Consulta",
+    description:
+      "Agende sua consulta na Clínica Personart em Sorocaba - SP. Escolha o dia e o horário disponíveis para o seu atendimento.",
+  });
+
   const [step, setStep] = useState(1);
   
   const form = useForm({

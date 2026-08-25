@@ -1,9 +1,16 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, Calendar, User } from "lucide-react";
 
 export default function Blog() {
+  useSeo({
+    title: "Blog de Psicologia",
+    description:
+      "Artigos sobre saúde mental, ansiedade, desenvolvimento infantil e bem-estar emocional, escritos pela equipe da Clínica Personart.",
+  });
+
   const posts = [
     {
       id: 1,

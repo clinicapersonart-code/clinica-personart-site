@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CLINIC_INFO } from "@shared/const";
@@ -17,6 +18,12 @@ import {
 } from "lucide-react";
 
 export default function NR1() {
+  useSeo({
+    title: "NR-1 e Riscos Psicossociais para Empresas",
+    description:
+      "Prevenção e intervenção de riscos psicossociais nas empresas: inventário de riscos, plano de ação e laudo técnico para o PGR, conforme a NR-1.",
+  });
+
   const atuacao = [
     {
       icon: Brain,

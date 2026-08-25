@@ -1,8 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useSeo } from "@/hooks/useSeo";
 import { CLINIC_INFO } from "@shared/const";
 import { Instagram, Linkedin, Mail } from "lucide-react";
 
 export default function Equipe() {
+  useSeo({
+    title: "Nossa Equipe",
+    description:
+      "Conheça os psicólogos da Clínica Personart em Sorocaba e as áreas de atuação de cada profissional da equipe.",
+  });
+
   // Dados da equipe atualizados
   const team = [
     {

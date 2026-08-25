@@ -1,8 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useSeo } from "@/hooks/useSeo";
 import { CLINIC_INFO } from "@shared/const";
 import { Brain, Target, Eye } from "lucide-react";
 
 export default function Sobre() {
+  useSeo({
+    title: "Sobre Nós",
+    description:
+      "Conheça a Clínica Personart: psicologia humanizada e ética em Sorocaba, com foco na saúde mental integral e atendimento para todas as idades.",
+  });
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

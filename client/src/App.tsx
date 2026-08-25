@@ -7,6 +7,7 @@ import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
 import Sobre from "@/pages/Sobre";
 import Servicos from "@/pages/Servicos";
+import NR1 from "@/pages/NR1";
 import Equipe from "@/pages/Equipe";
 import Contato from "@/pages/Contato";
 import Agendar from "@/pages/Agendar";
@@ -21,6 +22,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/sobre" component={Sobre} />
         <Route path="/servicos" component={Servicos} />
+        <Route path="/nr1" component={NR1} />
         <Route path="/equipe" component={Equipe} />
         <Route path="/contato" component={Contato} />
         <Route path="/agendar" component={Agendar} />

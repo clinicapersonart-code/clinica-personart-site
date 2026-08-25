@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useSeo } from "@/hooks/useSeo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,6 +21,12 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 export default function Contato() {
+  useSeo({
+    title: "Contato",
+    description:
+      "Endereço, telefone, WhatsApp e e-mail da Clínica Personart em Sorocaba - SP. Fale com a nossa equipe e tire suas dúvidas.",
+  });
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {

@@ -1,8 +1,15 @@
 import { Link } from "wouter";
+import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { AlertCircle } from "lucide-react";
 
 export default function NotFound() {
+  useSeo({
+    title: "Página não encontrada",
+    description:
+      "A página que você procura não existe ou foi movida. Volte ao início para navegar pelo site da Clínica Personart.",
+  });
+
   return (
     <div className="min-h-[80vh] flex items-center justify-center bg-background">
       <div className="text-center max-w-md px-4">

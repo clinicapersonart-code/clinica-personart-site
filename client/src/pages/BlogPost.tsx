@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useSeo } from "@/hooks/useSeo";
 import { Link, useRoute } from "wouter";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
 
@@ -96,6 +97,18 @@ export default function BlogPost() {
 
   // Encontrar o post correspondente ao slug
   const post = posts.find(p => p.slug === slug) || posts[0]; // Fallback para o primeiro post se não encontrar
+
+  // Resumo do artigo: primeiro trecho do conteúdo, sem as tags HTML
+  const resumo = post.content
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 155);
+
+  useSeo({
+    title: post.title,
+    description: resumo,
+  });
 
   return (
     <div className="min-h-screen bg-background pb-20">

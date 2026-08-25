@@ -19,6 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { label: "Início", href: "/" },
     { label: "Sobre", href: "/sobre" },
     { label: "Serviços", href: "/servicos" },
+    { label: "Empresas", href: "/nr1" },
     { label: "Equipe", href: "/equipe" },
     { label: "Blog", href: "/blog" },
     { label: "Contato", href: "/contato" },
@@ -66,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <div className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
@@ -86,7 +87,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {/* Mobile Menu using Sheet */}
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-primary">
+              <Button variant="ghost" size="icon" className="lg:hidden text-primary">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Menu</span>
               </Button>

@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { CLINIC_INFO, SERVICES, CONVENIOS } from "@shared/const";
@@ -6,6 +7,12 @@ import { ArrowRight, Target, Eye, Users, Baby, User, Brain, Puzzle } from "lucid
 import { motion } from "framer-motion";
 
 export default function Home() {
+  useSeo({
+    title: "Psicologia em Sorocaba - SP",
+    description:
+      "Clínica de psicologia em Sorocaba - SP. Terapia individual e infantil, avaliação neuropsicológica, ABA, perícia psicológica e avaliação de riscos psicossociais da NR-1.",
+  });
+
   const iconMap: Record<string, any> = {
     user: User,
     baby: Baby,

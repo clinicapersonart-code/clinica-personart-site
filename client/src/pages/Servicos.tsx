@@ -16,7 +16,12 @@ export default function Servicos() {
     briefcase: Briefcase,
   };
 
-  const serviceDetails = [
+  const serviceDetails: ((typeof SERVICES)[number] & {
+    benefits: string[];
+    steps: { title: string; description: string }[];
+    href?: string;
+    hrefLabel?: string;
+  })[] = [
     {
       ...SERVICES[0], // Terapia Individual
       benefits: [
@@ -163,6 +168,8 @@ export default function Servicos() {
     },
     {
       ...SERVICES[6], // Avaliação NR1
+      href: "/nr1",
+      hrefLabel: "Conheça o projeto para empresas",
       benefits: [
         "Conformidade com NR-1 do Ministério do Trabalho",
         "Identificação de riscos psicossociais",
@@ -242,6 +249,14 @@ export default function Servicos() {
                         </div>
                       ))}
                     </div>
+                    {service.href && (
+                      <Link href={service.href}>
+                        <Button className="mt-8 h-12 px-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                          {service.hrefLabel}
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                      </Link>
+                    )}
                   </div>
 
                   <div className={`${isEven ? "md:order-2" : "md:order-1"} animate-in slide-in-from-bottom-10 fade-in duration-700 delay-200`}>

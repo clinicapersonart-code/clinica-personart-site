@@ -8,7 +8,6 @@ import Home from "@/pages/Home";
 import Sobre from "@/pages/Sobre";
 import Servicos from "@/pages/Servicos";
 import NR1 from "@/pages/NR1";
-import Equipe from "@/pages/Equipe";
 import Contato from "@/pages/Contato";
 import Agendar from "@/pages/Agendar";
 import Blog from "@/pages/Blog";
@@ -23,7 +22,6 @@ function Router() {
         <Route path="/sobre" component={Sobre} />
         <Route path="/servicos" component={Servicos} />
         <Route path="/nr1" component={NR1} />
-        <Route path="/equipe" component={Equipe} />
         <Route path="/contato" component={Contato} />
         <Route path="/agendar" component={Agendar} />
         <Route path="/blog" component={Blog} />

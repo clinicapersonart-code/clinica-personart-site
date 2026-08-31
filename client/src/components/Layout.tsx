@@ -20,7 +20,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { label: "Sobre", href: "/sobre" },
     { label: "Serviços", href: "/servicos" },
     { label: "Empresas", href: "/nr1" },
-    { label: "Equipe", href: "/equipe" },
     { label: "Blog", href: "/blog" },
     { label: "Contato", href: "/contato" },
   ];
